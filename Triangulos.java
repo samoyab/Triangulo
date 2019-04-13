@@ -19,9 +19,9 @@ public class Triangulos {
      */
     public static void main(String[] args) {
 
-            int x = 0;
-            int y = 0;
-            int z = 0;
+            long x = 0;
+            long y = 0;
+            long z = 0;
             
             Scanner reader = new Scanner(System.in);
                     
@@ -36,12 +36,17 @@ public class Triangulos {
                   System.out.println("Los lados de un triangulo no pueden ser 0 o negativos");         
                   return;
            }  
+           
+           if( (x> y+z) || (y> x+z) || (z> x+y) ){
+                  System.out.println("Los parametros ingresados no son de un triangulo");         
+                  return;
+           } 
           
            if (x==y && x==z) {
             System.out.println("El Triangulo es Equilatero");
         }
            else if (x==y || x==z || z==y){
-               System.out.println("El Triangulo es Isoceles");
+               System.out.println("El Triangulo es Isósceles");
            }
            else
                System.out.println("El Triangulo es Escaleno");
